@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모나 용평</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/01.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mainSwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                }, 
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper = new Swiper(".eventSwiper", {
+                direction: "vertical",
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper = new Swiper(".lastSwiper", {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+
+            var swiper2 = new Swiper(".lastSwiper2", {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+
+            let menuBtn = document.querySelector('.button');
+            let newsBox = document.querySelector('.text_box');
+
+            menuBtn.addEventListener('click', () => {
+                newsBox.classList.toggle('active');
+            });
+
+            let itemBox = document.querySelector('.item');
+
+            itemBox.addEventListener('click', () => {
+                itemBox.classList.toggle('active');
+            });
+
+            let scrollBox = document.querySelector('.scroll_box');
+
+            scrollBox.addEventListener('click', function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            
+            let reservationBtn = document.querySelector('reservation');
+            let reservationBox = document.querySelector('reservation_box');
+
+            reservationBtn.addEventListener('click', () => {
+                reservationBox.classList.toggle('active');
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#"><img src="img/logo1.png" alt=""></a>
+                </h1> <!-- logo end -->
+
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#" class="depth-01">용평 가이드맵</a>
+
+                            <ul class="depth-02">
+                                <li><a href="#">전체 리조트맵</a>
+                                    <a href="https://www.yongpyong.co.kr/kor/guide/resortGuideMap.do"
+                                        class="map"></a><img src="img/img_resort_map.png" alt="">
+                                </li>
+
+                                <li><a href="#">슬로프맵</a>
+                                    <a href="#"><img src="img/img_resort_slope_map.jpg" alt=""></a>
+                                </li>
+
+                                <li><a href="#">천년주목숲길 맵</a>
+                                    <a href="#"><img src="img/img_trail_map09.png" alt=""></a>
+                                </li>
+
+                                <li><a href="#">모나파크</a>
+                                    <a href="#"><img src="img/img_trail_map01.png" alt=""></a>
+                                </li>
+
+                                <li><a href="#">애니포레</a>
+                                    <a href="#"><img src="img/img_trail_map000.png" alt=""></a>
+                                </li>
+
+                                <li><a href="#">트레킹맵</a>
+                                    <a href="#"><img src="img/img_resort_map06.png" alt=""></a>
+                                </li>
+
+                                <li><a href="#">용평 워터파크</a>
+                                    <a href="#"><img src="img/img_trail_map05.png" alt=""></a>
+                                </li>
+                            </ul> <!-- depth-02 -->
+                        </li>
+
+                        <li>
+                            <a href="#" class="depth-01">단체 행사</a>
+
+                            <ul class="depth-02">
+                                <li><a href="#">세미나 & 연회</a></li>
+                                <li><a href="#">학생 단체</a></li>
+                                <li><a href="#">웨딩</a></li>
+                                <li><a href="#">단체행사상담</a></li>
+                                <li><a href="#">단체행사신청</a></li>
+                                <li><a href="#">학회예약</a></li>
+                                <li><a href="#">제휴사예약</a></li>
+                            </ul> <!-- depth-02 -->
+                        </li>
+
+                        <li>
+                            <a href="#" class="depth-01">고객센터</a>
+                            <ul class="depth-02">
+                                <li><a href="#">회원서비스</a></li>
+                                <li><a href="#">상품권</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">예배/미사/기도실</a></li>
+                                <li><a href="#">오시는길</a></li>
+                            </ul> <!-- depth-02 -->
+                        </li>
+                    </ul> <!-- gnb end -->
+                </nav> <!-- nav end -->
+
+                <ul class="util">
+                    <li><a href="#"><img src="img/ticket.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/user.svg" alt=""></a></li>
+                    <li><a href="#"><img src="img/menu.svg" alt=""></a></li>
+                </ul> <!-- util end -->
+            </div> <!-- inner end -->
+
+
+            <div class="top_inner">
+                <ul class="box">
+                    <li><a href="#">모나 용평</a></li>
+                    <li><a href="#">비체팰리스 </a></li>
+                    <li><a href="#">디오션리조트</a></li>
+                    <li><a href="#">파인리즈리조트</a></li>
+                    <li><a href="#">세일여행사</a></li>
+                    <li><a href="#">모나캠핑파크</a></li>
+                    <li><a href="#">AINO C.C</a></li>
+                    <li><a href="#">SHIMABARA C.C</a></li>
+                </ul> <!-- box end -->
+            </div> <!-- top_inner -->
+
+            <button class="reservation">
+                <a href="#">통합 예약 바로가기</a>
+                <img src="img/arrow.png" alt="">
+            </button> <!-- reservation end -->
+
+            <div class="reservation_box">
+                <div class="box_wrap">
+                    <div class="box">
+                        <p>예약 종류</p>
+                        <div class="box01_1">
+                            <span>예약 종류 선택하기</span>
+                            <img src="img/fe--arrow-down.png" alt="">
+                        </div> <!-- box01_1 end -->
+                    </div> <!-- box_end -->
+                    <div class="box">
+                        <p>체크인</p>
+                        <div class="box01_1">
+                            <span>2025 - 03 - 04</span>
+                            <img src="img/uiw--date.png" alt="">
+                        </div> <!-- box01_1 end -->
+                    </div> <!-- box_end -->
+                    <div class="box">
+                        <p>체크아웃</p>
+                        <div class="box01_1">
+                            <span>2025 - 03 - 05</span>
+                            <img src="img/uiw--date.png" alt="">
+                        </div> <!-- box01_1 end -->
+                    </div> <!-- box_end -->
+                </div> <!-- box_wrap -->
+
+                <a href="#">예약하기</a>
+            </div> <!-- reservation_box end -->
+        </header> <!-- header end -->
+
+        <main class="main">
+            <section class="main_visual">
+                <div class="swiper mainSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="img/banner1.jpg" alt="">
+                            <div class="main_box">
+                                <p>모나 용평은 행복을 만듭니다.</p>
+                                <h3>MONA YONG PYONG</h3>
+                            </div> <!-- main_box end -->
+                            <div class="button">
+                                <p>NEWS</p>
+                            </div> <!-- button end -->
+
+                            <div class="text_box">
+                                <ul class="text">
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 용평9 골프코스 이용요금 인상 안내(4/1~)</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 2025 용평9 골프코스 4월 이용 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>발왕산 관광케이블카 휴장 기간 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>용평워터파크 정기휴장 안내(3/4~4/4)</p>
+                                            <span>2025-02-26</span>
+                                        </a>
+                                    </li>
+                                </ul> <!-- text end -->
+                            </div> <!-- text_box end -->
+
+                            <div class="weather_box">
+                                <div class="box">
+                                    <p>서울</p>
+                                    <img src="img/weather_wind.svg" alt="">
+                                    <p>5.8<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>용평</p>
+                                    <img src="img/weather_cloud.svg" alt="">
+                                    <p>3.7<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>강릉</p>
+                                    <img src="img/weather_sun.svg" alt="">
+                                    <p>12<span>℃</span></p>
+                                </div> <!-- box end -->
+                            </div> <!-- weather_box -->
+
+                        </div> <!-- swiper-slide -->
+
+                        <div class="swiper-slide">
+                            <img src="img/banner2.jpg" alt="">
+                            <div class="main_box">
+                                <p>모나 용평은 행복을 만듭니다.</p>
+                                <h3>MONA YONG PYONG</h3>
+                            </div> <!-- main_box end -->
+
+                            <div class="button">
+                                <p>NEWS</p>
+                            </div> <!-- button end -->
+
+                            <div class="text_box">
+                                <ul class="text">
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 용평9 골프코스 이용요금 인상 안내(4/1~)</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 2025 용평9 골프코스 4월 이용 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>발왕산 관광케이블카 휴장 기간 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>용평워터파크 정기휴장 안내(3/4~4/4)</p>
+                                            <span>2025-02-26</span>
+                                        </a>
+                                    </li>
+                                </ul> <!-- text end -->
+                            </div> <!-- text_box end -->
+
+                            <div class="weather_box">
+                                <div class="box">
+                                    <p>서울</p>
+                                    <img src="img/weather_wind.svg" alt="">
+                                    <p>5.8<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>용평</p>
+                                    <img src="img/weather_cloud.svg" alt="">
+                                    <p>3.7<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>강릉</p>
+                                    <img src="img/weather_sun.svg" alt="">
+                                    <p>12<span>℃</span></p>
+                                </div> <!-- box end -->
+                            </div> <!-- weather_box -->
+
+                        </div> <!-- swiper-slide end -->
+
+                        <div class="swiper-slide">
+                            <img src="img/banner3.jpg" alt="">
+                            <div class="main_box">
+                                <p>모나 용평은 행복을 만듭니다.</p>
+                                <h3>MONA YONG PYONG</h3>
+                            </div> <!-- main_box end -->
+                            <div class="button">
+                                <p>NEWS</p>
+                            </div> <!-- button end -->
+
+                            <div class="text_box">
+                                <ul class="text">
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 용평9 골프코스 이용요금 인상 안내(4/1~)</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>[모나 용평 골프] 2025 용평9 골프코스 4월 이용 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>발왕산 관광케이블카 휴장 기간 안내</p>
+                                            <span>2025-02-27</span>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <p>용평워터파크 정기휴장 안내(3/4~4/4)</p>
+                                            <span>2025-02-26</span>
+                                        </a>
+                                    </li>
+                                </ul> <!-- text end -->
+                            </div> <!-- text_box end -->
+
+                            <div class="weather_box">
+                                <div class="box">
+                                    <p>서울</p>
+                                    <img src="img/weather_wind.svg" alt="">
+                                    <p>5.8<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>용평</p>
+                                    <img src="img/weather_cloud.svg" alt="">
+                                    <p>3.7<span>℃</span></p>
+                                </div>
+
+                                <div class="box">
+                                    <p>강릉</p>
+                                    <img src="img/weather_sun.svg" alt="">
+                                    <p>12<span>℃</span></p>
+                                </div> <!-- box end -->
+                            </div> <!-- weather_box -->
+                        </div> <!-- swiper-slide end -->
+
+                    </div> <!-- swiper-wrapper end -->
+                </div> <!-- swiper mainSwiper end -->
+            </section> <!-- main_visual -->
+
+            <section class="section-01">
+                <div class="box_wrap">
+                    <img src="img/section1.jpg" alt="">
+                    <h2>MONA YONG PYONG</h2>
+                    <div class="left_box">
+                        <div class="circle">
+
+                            <div class="text">
+                                <p>#강원도</p>
+                            </div> <!-- text end -->
+
+                            <div class="text">
+                                <p>#평창</p>
+                            </div> <!-- text end -->
+
+                            <div class="text">
+                                <p>#대관령</p>
+                            </div> <!-- text end -->
+
+                            <div class="text">
+                                <p>#자연</p>
+                            </div> <!-- text end -->
+                        </div> <!-- circle end -->
+                    </div> <!-- left_box end -->
+
+                    <div class="text_box">
+                        <p class="first">"<strong>대자연</strong>을 통한 새로운 <strong>행복가치</strong> 실현"</p>
+                        <p class="second">"모두의 <strong>행복</strong>, 나의 <strong>행복</strong>"</p>
+                        <p class="third">#글로벌 리딩 브랜드</p>
+                        <p class="fourth">#해피니스 빌더</p>
+                        <p class="fifth">#세계평화통일가정연합유지재단</p>
+                    </div> <!-- text_box -->
+
+                </div> <!-- box_wrap end -->
+            </section> <!-- section-01 end -->
+
+            <section class="section-02">
+                <div class="box_wrap">
+                    <img src="img/section3.jpg" alt="">
+                    <div class="blur"></div>
+                    <h2>RESERVATION</h2>
+                    <div class="item_wrap">
+                        <div class="item">
+                            <img src="img/hotel.jpg" alt="">
+                            <div class="text">
+                                <p>객실 안내 & 예약</p>
+                            </div> <!-- text end -->
+                        </div> <!-- item end -->
+
+                        <div class="item">
+                            <img src="img/케이블카.jpg" alt="">
+                            <div class="text">
+                                <p>레저 안내 & 예약</p>
+                            </div> <!-- text end -->
+                        </div> <!-- item end -->
+
+                        <div class="item">
+                            <img src="img/스키.jpg" alt="">
+                            <div class="text">
+                                <p>스키장 안내 & 예약</p>
+                            </div> <!-- text end -->
+                        </div> <!-- item end -->
+
+                        <div class="item">
+                            <img src="img/골프장.jpg" alt="">
+                            <div class="text">
+                                <p>골프장 안내 & 예약</p>
+                            </div> <!-- text end -->
+                        </div> <!-- item end -->
+
+                        <div class="item">
+                            <img src="img/워터파크.jpg" alt="">
+                            <div class="text">
+                                <p>워터파크 안내 & 예약</p>
+                            </div> <!-- text end -->
+                        </div> <!-- item end -->
+
+                    </div> <!-- item_wrap -->
+                </div> <!-- box_wrap end -->
+            </section> <!-- section-02 end -->
+
+            <section class="section-03">
+                <div class="event_wrap">
+                    <img src="img/section4.jpg" alt="">
+                    <h2>EVENT & PACKAGE</h2>
+                    <a href="#">
+                        <p>자세히 보기 -></p>
+                    </a>
+                    <div class="all_box">
+
+                        <div class="sticky">
+                            <div class="swiper eventSwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="img/event1.jpg" alt=""></div>
+                                    <div class="swiper-slide"><img src="img/event2.jpg" alt=""></div>
+                                </div> <!-- swiper-wrapper end -->
+                            </div> <!-- eventSwiper end -->
+                        </div> <!-- sticky end -->
+
+                        <div class="package_box">
+
+                            <div class="package">
+                                <img src="img/package_01.jpeg" alt="">
+                                <div class="text">
+                                    <h2>3월 설질체험 PKG (리프트 + 렌탈)</h2>
+                                    <p>#객실 #리프트주간권 #장비렌탈주간권</p>
+                                    <span>2025-03-03 ~ 2025-03-29</span>
+                                    <strong>170,000 <span>원 ~</span></strong>
+
+                                    <div class="button">
+                                        <a
+                                            href="https://www.yongpyong.co.kr/kor/guide/package/read.do?packageId=MHP2501&packageCate1=">보러가기</a>
+                                    </div>
+                                </div>
+                            </div> <!-- package end -->
+
+                            <div class="package">
+                                <img src="img/package_02.jpeg" alt="">
+                                <div class="text">
+                                    <h2>조식은 먹고봄 PKG</h2>
+                                    <p>#객실 #더 샬레 조식 뷔페</p>
+                                    <span>2025-03-03 ~ 2025-07-11</span>
+                                    <strong>134,000 <span>원 ~</span></strong>
+
+                                    <div class="button">
+                                        <a
+                                            href="https://www.yongpyong.co.kr/kor/guide/package/read.do?packageId=MHP2513&packageCate1=">보러가기</a>
+                                    </div>
+                                </div>
+                            </div> <!-- package end -->
+
+                            <div class="package">
+                                <img src="img/package_03.jpeg" alt="">
+                                <div class="text">
+                                    <h2>발왕산 산책 PKG</h2>
+                                    <p>#객실 #케이블카 #뮤지엄망고</p>
+                                    <span>2025-03-03 ~ 2025-07-11</span>
+                                    <strong>114,000 <span>원 ~</span></strong>
+
+                                    <div class="button">
+                                        <a
+                                            href="https://www.yongpyong.co.kr/kor/guide/package/read.do?packageId=MHP2515&packageCate1=">보러가기</a>
+                                    </div>
+                                </div>
+                            </div> <!-- package end -->
+
+                            <div class="package">
+                                <img src="img/package_04.jpeg" alt="">
+                                <div class="text">
+                                    <h2>윈터 리프트 + 와인뷔페 PKG</h2>
+                                    <p>#객실 #리프트주간권 #와인뷔페</p>
+                                    <span>2024-12-27 ~ 2025-03-02</span>
+                                    <strong>312,000 <span>원 ~</span></strong>
+
+                                    <div class="button">
+                                        <a href="#">보러가기</a>
+                                    </div>
+                                </div>
+                            </div> <!-- package end -->
+
+                        </div> <!-- package_box -->
+                    </div> <!-- all_box end -->
+                </div> <!-- event_wrap end -->
+            </section> <!-- section-03 end -->
+
+            <section class="section-04">
+                <video src="img/video1.mp4" autoplay muted loop></video>
+                <div class="lusong_wrap">
+                    <img src="img/루송채.jpg" alt="">
+                    <div class="half_box"></div>
+                    <div class="all_box"></div>
+
+
+                    <div class="image">
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                            class="swiper lastSwiper2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/lusong1.jpg" />
+                                </div> <!-- swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong22.jpg" />
+                                </div> <!-- swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong3.jpg" />
+                                </div> <!-- swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong4.jpg" />
+                                </div> <!-- swiper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong6.jpg" />
+                                </div> <!-- swiper-slide end -->
+                            </div> <!-- swiper-wrapper end -->
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <div thumbsSlider="" class="swiper lastSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/lusong1.jpg" />
+                                </div> <!-- siwper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong22.jpg" />
+                                </div> <!-- siwper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong3.jpg" />
+                                </div> <!-- siwper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong4.jpg" />
+                                </div> <!-- siwper-slide end -->
+                                <div class="swiper-slide">
+                                    <img src="img/lusong6.jpg" />
+                                </div> <!-- siwper-slide end -->
+                            </div> <!-- swiper-wrapper end -->
+                        </div> <!-- lastSwiper end -->
+                    </div> <!-- image end -->
+
+                    <div class="text_box">
+                        <div class="first_box">
+                            <img src="img/루송채logo_w.png" alt="">
+                            <strong>프리미엄 콘도미니엄</strong>
+                            <p>발왕산 절경과 함께하는 비지니스 리조트</p>
+                        </div> <!-- first_box -->
+
+                        <div class="second_box">
+                            <a
+                                href="https://www.yongpyong.co.kr/EgovPageLink.do?link=kor/customer/service/lusongce">분양상품</a>
+                            <a href="https://lusongce.mycafe24.com/">VR 보러가기</a>
+                        </div> <!-- second_box -->
+                    </div> <!-- text_box -->
+                </div> <!-- lusong_wrap end -->
+            </section> <!-- section-04 end -->
+
+            <section class="section-05">
+                <div class="photo_wrap">
+                    <img src="img/section6.jpg" alt="">
+                    <div class="blur_box"></div>
+                    <div class="title_box">
+                        <div class="back_box"></div>
+                        <h2>PHOTO & VIDEO</h2>
+                        <a href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoList.do">
+                            <p>More</p>
+                        </a>
+                    </div> <!-- title_box -->
+
+                    <div class="photo_box">
+
+                        <a
+                            href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoRead.do?imphId=1346&pageIndex=1">
+                            <div class="image">
+                                <img src="img/photo1.jpg" alt="">
+                                <p>자세히 보기</p>
+                            </div> <!-- image end -->
+                        </a>
+
+                        <a
+                            href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoRead.do?imphId=1347&pageIndex=1">
+                            <div class="image">
+                                <img src="img/photo2.jpg" alt="">
+                                <p>자세히 보기</p>
+                            </div> <!-- image end -->
+                        </a>
+
+                        <a
+                            href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoRead.do?imphId=1345&pageIndex=1">
+                            <div class="image">
+                                <img src="img/photo3.jpg" alt="">
+                                <p>자세히 보기</p>
+                            </div> <!-- image end -->
+                        </a>
+
+                        <a
+                            href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoRead.do?imphId=1344&pageIndex=1">
+                            <div class="image">
+                                <img src="img/photo4.jpg" alt="">
+                                <p>자세히 보기</p>
+                            </div> <!-- image end -->
+                        </a>
+
+                        <a
+                            href="https://www.yongpyong.co.kr/kor/guide/realTimeNews/lgbPhotoRead.do?imphId=1343&pageIndex=1">
+                            <div class="image">
+                                <img src="img/photo5.jpg" alt="">
+                                <p>자세히 보기</p>
+                            </div> <!-- image end -->
+                        </a>
+                    </div> <!-- photo_box -->
+
+                    <div class="video_box">
+                        <div class="first_video">
+                            <div>
+                                <iframe title="'모나용평'에서 업로드한 동영상" width="640" height="360"
+                                    src="https://play-tv.kakao.com/embed/player/cliplink/453082891?service=player_share"
+                                    allowfullscreen frameborder="0" scrolling="no"
+                                    allow="autoplay; fullscreen; encrypted-media"></iframe>
+                            </div>
+                        </div> <!-- first_video -->
+
+                        <div class="second_video">
+                            <div>
+                                <iframe title="'모나용평'에서 업로드한 동영상" width="640" height="360"
+                                    src="https://play-tv.kakao.com/embed/player/cliplink/452082112?service=player_share"
+                                    allowfullscreen frameborder="0" scrolling="no"
+                                    allow="autoplay; fullscreen; encrypted-media"></iframe>
+                            </div>
+                        </div> <!-- second_video -->
+                    </div> <!-- video_box -->
+                </div> <!-- photo_wrap end -->
+            </section> <!-- section-05 -->
+        </main> <!-- main end -->
+
+        <footer class="footer">
+            <div class="text_wrap">
+                <div class="box_01">
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 1.png" alt="">
+                        <p>스키부문 브랜드올림픽</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 2.png" alt="">
+                        <p>소방방재청 주관대상</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 4.png" alt="">
+                        <p>한국전자인증서비스</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 5.png" alt="">
+                        <p>최초 녹색기업 선정</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 6.png" alt="">
+                        <p>퍼스트브랜드</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_award 7.png" alt="">
+                        <p>고객만족도</p>
+                    </div> <!-- icon_box end -->
+
+                    <div class="icon_box">
+                        <img src="img/bg_footer_web 1.png" alt="">
+                        <p>2015웹 어워드 레저/스포츠 부문 최우수상</p>
+                    </div> <!-- icon_box end -->
+
+                </div> <!-- box_01 end -->
+
+                <div class="box_02">
+                    <div class="logo_box">
+                        <a href=""><img src="img/모나 용평 로고 1 (1).png" alt=""></a>
+                    </div> <!-- logo_box end -->
+
+                    <div class="text_box">
+                        <div class="box_first">
+                            <div class="left_box">
+                                <a href="#">개인정보처리방침</a>
+                                <a href="#">고정형 영상정보처리기기 운영관리방침</a>
+                                <a href="#">이메일무단수집거부</a>
+                            </div> <!-- left_box end -->
+
+                            <div class="right_box">
+                                <a href="#"><img src="img/Vector.png" alt=""></a>
+                                <a href="#"><img src="img/Vector (1).png" alt=""></a>
+                                <a href="#"><img src="img/Vector (2).png" alt=""></a>
+                                <a href="#"><img src="img/Vector (3).png" alt=""></a>
+                            </div> <!-- right_box -->
+
+                        </div> <!-- box_first end -->
+
+                        <div class="box_second">
+                            <div class="left_box">
+                                <div class="box_text">
+                                    <a href="#"><strong>회사소개</strong></a>
+                                    <ul class="text">
+                                        <li><a href="#">기업이념</a></li>
+                                        <li><a href="#">그린용평</a></li>
+                                        <li><a href="#">연혁</a></li>
+                                        <li><a href="#">수상내역</a></li>
+                                    </ul> <!-- text end -->
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>투자정보</strong></a>
+                                    <ul class="text">
+                                        <li><a href="#">채무정보</a></li>
+                                        <li><a href="#">공시정보</a></li>
+                                        <li><a href="#">IR자료실</a></li>
+                                        <li><a href="#">관리규정</a></li>
+                                    </ul> <!-- text end -->
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>홍보센터</strong></a>
+                                    <ul class="text">
+                                        <li><a href="#">언론보도</a></li>
+                                    </ul> <!-- text end -->
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>채용안내</strong></a>
+                                    <ul class="text">
+                                        <li><a href="#">인사제도</a></li>
+                                        <li><a href="#">채용안내</a></li>
+                                        <li><a href="#">공지사항</a></li>
+                                        <li><a href="#">채용공고</a></li>
+                                        <li><a href="#">채용결과확인</a></li>
+                                    </ul> <!-- text end -->
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>제휴안내</strong></a>
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>상품권</strong></a>
+                                </div> <!-- box_text end -->
+
+                                <div class="box_text">
+                                    <a href="#"><strong>구내 전화번호</strong></a>
+                                    <ul class="text">
+                                        <li><a href="#">전자상품권</a></li>
+                                        <li><a href="#">기타상품권</a></li>
+                                    </ul> <!-- text end -->
+                                </div> <!-- box_text end -->
+                            </div> <!-- left_box end -->
+
+                            <div class="right_box">
+                                <div class="number_box">
+                                    <h4>객실 예약</h4>
+                                    <strong>1588-0009</strong>
+                                    <p>평일 : 09:00 - 18:00</p>
+                                    <p>토요일 : 09:00 - 15:00</p>
+                                    <span>* 일요일 및 공휴일 휴무</span>
+                                </div> <!-- number_box -->
+
+                                <div class="number_box2">
+                                    <h4>골프 예약</h4>
+                                    <strong>1522-3111</strong>
+                                    <span>문자) 010 - 5116 - 3114</span>
+                                    <p>월요일 ~ 금요일 : 09:00 - 17:00</p>
+                                    <span>* 토, 일, 공휴일 휴무</span>
+                                </div> <!-- number_box -->
+                            </div> <!-- right_box end -->
+                        </div> <!-- box_second end -->
+
+                        <div class="box_last">
+                            <div>
+                                <strong>대표이사 : <span>임학운</span></strong>
+                            </div>
+
+                            <div>
+                                <strong>사업자등록번호 : <span>226-81-24374</span></strong>
+                            </div>
+
+                            <div>
+                                <strong>통신판매업 신고번호 : <span> 제 2004-3호</span></strong>
+                            </div>
+
+                            <div>
+                                <strong>개인정보관리책임 : <span>전략지원본부장 심완석</span></strong>
+                            </div>
+                        </div> <!-- box_last end -->
+                    </div> <!-- text-end -->
+                </div> <!-- box_02 end -->
+            </div> <!-- text_wrap end -->
+        </footer> <!-- footer end -->
+
+        <button class="scroll_box">
+            <img src="img/arrow-up.png" alt="">
+        </button> <!-- scroll_box end -->
+    </div> <!-- wrap end -->
+
+</body>
+
+</html>
