@@ -836,6 +836,7 @@ li {
     width: 100%;
     height: 100%;
     display: block;
+    
 }
 
 .section-03 .event_wrap > h2 {
@@ -974,7 +975,7 @@ li {
 
 
 .section-04 {
-    width: 1920px;
+    
 }
 
 .section-04 video {
@@ -986,7 +987,7 @@ li {
 
 
 .section-04 .lusong_wrap {
-    width: 1920px;
+    width: 100%;
     height: 800px;
     position: relative;
 }
@@ -1021,14 +1022,14 @@ li {
 .section-04 .lusong_wrap .image{
     position: absolute;
     top: 50%;
-    left: 5.5%;
+    left: 0;
     transform: translateY(-50%);
     width: 900px;
 }
 
 .section-04 .lusong_wrap .image .lastSwiper2 {
-    width: 1200px;
-    height: 600px;
+    width: 1405px;
+    height: 700px;
 }
 
 .section-04 .lusong_wrap .image .lastSwiper2 .swiper-wrapper {
@@ -1037,7 +1038,7 @@ li {
 }
 
 .section-04 .lusong_wrap .image .lastSwiper2 .swiper-wrapper .swiper-slide {
-    width: 100%;
+    width: 1405px;
     height: 100%;
 }
 
@@ -1049,7 +1050,7 @@ li {
 
 
 .section-04 .lusong_wrap .image .lastSwiper {
-    width: 1200px;
+    width: 1405px;
     height: 100px;
 }
 
@@ -1142,7 +1143,7 @@ li {
 
 .section-05 {}
 .section-05 .photo_wrap {
-    width: 1920px;
+    width: 100%;
     height: 1000px;
     position: relative;
     
@@ -1421,7 +1422,9 @@ li {
 
 
 
-footer .text_wrap {}
+footer .text_wrap {
+    width: 100%;
+}
 footer .text_wrap .box_01 {
     display: flex;
     justify-content: center;
@@ -1448,7 +1451,7 @@ footer .text_wrap .box_01 .icon_box:nth-child(7) img {
 }
 
 footer .text_wrap .box_02 {
-    width: 1920px;
+    width: 100%;
     height: 700px;
     background-color: #323A1B;
     color: white;
